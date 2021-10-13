@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Extentions
 {
@@ -29,17 +26,19 @@ namespace Extentions
             }
             int div2 = 0;
             bool b = list.IsDevidedBy(2, out div2);
-            //////////////////////////////////////
+
             string c = "VaLOd";
             char d = 'o';
             bool k = c.HasLetter(ref d);
             Console.WriteLine(k);
-            Console.WriteLine(c.OnlyFirstLetterUp());
-            c._Reverse();
+
+            c = c.OnlyFirstLetterUp();
+            Console.WriteLine(c);
+
+            c = c._Reverse();
+            Console.WriteLine(c);
+
             Console.ReadKey();
-
         }
-
     }
-
 }

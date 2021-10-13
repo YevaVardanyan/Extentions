@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Extentions
 {
     public static class StringExtentions
     {
-        public static void _Reverse(this string source)
+        public static string _Reverse(this string source)
         {
             char temp;
             char[] arr = source.ToCharArray();
@@ -19,8 +15,7 @@ namespace Extentions
                 arr[arr.Length - i - 1] = temp;
             }
 
-            source = arr.ToString();
-
+            return new string(arr);
         }
         public static string OnlyFirstLetterUp(this string source)
         {
@@ -28,7 +23,6 @@ namespace Extentions
             string a = source.Substring(0, 1);
             source = a.ToUpper() + b.Remove(0, 1);
             return source;
-
         }
         public static bool HasLetter(this string source, ref char letter)
         {
